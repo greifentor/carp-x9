@@ -2,8 +2,6 @@ package de.ollie.carp.chalkous9.persistence.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -24,9 +22,8 @@ import lombok.experimental.Accessors;
 public class VolkDBO {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
-	private long id;
+	@Column(name = "KEY")
+	private String key;
 	@Column(name = "BASISWERT_AU")
 	private int basiswertAu;
 	@Column(name = "BASISWERT_CH")

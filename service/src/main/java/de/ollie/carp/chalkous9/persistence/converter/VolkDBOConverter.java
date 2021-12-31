@@ -8,7 +8,7 @@ import javax.inject.Named;
 import lombok.Generated;
 
 import de.ollie.carp.chalkous9.persistence.entity.VolkDBO;
-import de.ollie.carp.chalkous9.core.model.Volk;
+import de.ollie.carp.chalkous9.core.model.VolkSO;
 
 /**
  * A DBO converter for volks.
@@ -19,7 +19,7 @@ import de.ollie.carp.chalkous9.core.model.Volk;
 @Named
 public class VolkDBOConverter {
 
-	public VolkDBO toDBO(Volk model) {
+	public VolkDBO toDBO(VolkSO model) {
 		if (model == null) {
 			return null;
 		}
@@ -36,11 +36,11 @@ public class VolkDBOConverter {
 				.setName(model.getName());
 	}
 
-	public Volk toModel(VolkDBO dbo) {
+	public VolkSO toModel(VolkDBO dbo) {
 		if (dbo == null) {
 			return null;
 		}
-		return new Volk()
+		return new VolkSO()
 				.setKey(dbo.getKey())
 				.setBasiswertAu(dbo.getBasiswertAu())
 				.setBasiswertCh(dbo.getBasiswertCh())

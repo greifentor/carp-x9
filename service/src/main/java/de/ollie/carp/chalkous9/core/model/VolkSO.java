@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @Data
 @Generated
-public class Volk {
+public class VolkSO {
 
 	private String key;
 	private int basiswertAu;

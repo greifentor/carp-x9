@@ -2,7 +2,7 @@ package de.ollie.carp.chalkous9.core.service.port.persistence;
 
 import java.util.Optional;
 
-import de.ollie.carp.chalkous9.core.model.Volk;
+import de.ollie.carp.chalkous9.core.model.VolkSO;
 import lombok.Generated;
 
 /**
@@ -13,12 +13,12 @@ import lombok.Generated;
 @Generated
 public interface VolkPersistencePort {
 
-	Volk create(Volk model);
+	VolkSO create(VolkSO model);
 
-	Optional<Volk> findById(String key);
+	Optional<VolkSO> findById(String key);
 
-	Volk update(Volk model);
+	VolkSO update(VolkSO model);
 
-	void delete(Volk model);
+	void delete(VolkSO model);
 
 }

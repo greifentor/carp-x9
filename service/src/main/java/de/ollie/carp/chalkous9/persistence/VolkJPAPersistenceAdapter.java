@@ -7,7 +7,7 @@ import javax.inject.Named;
 
 import de.ollie.carp.chalkous9.persistence.converter.VolkDBOConverter;
 import de.ollie.carp.chalkous9.persistence.repository.VolkDBORepository;
-import de.ollie.carp.chalkous9.core.model.Volk;
+import de.ollie.carp.chalkous9.core.model.VolkSO;
 
 /**
  * A DBO persistence adapter for volks.
@@ -22,20 +22,20 @@ public class VolkJPAPersistenceAdapter {
 	@Inject
 	private VolkDBORepository repository;
 
-	public Volk create(Volk model) {
+	public VolkSO create(VolkSO model) {
 		model.setKey(null);
 		return converter.toModel(repository.save(converter.toDBO(model)));
 	}
 
-	public Optional<Volk> findById(String key) {
+	public Optional<VolkSO> findById(String key) {
 		return repository.findById(key).map(dbo -> converter.toModel(dbo));
 	}
 
-	public Volk update(Volk model) {
+	public VolkSO update(VolkSO model) {
 		return converter.toModel(repository.save(converter.toDBO(model)));
 	}
 
-	public void delete(Volk model) {
+	public void delete(VolkSO model) {
 		repository.deleteById(model.getKey());
 	}
 

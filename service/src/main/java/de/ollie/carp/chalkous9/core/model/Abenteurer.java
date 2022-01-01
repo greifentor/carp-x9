@@ -1,6 +1,6 @@
 package de.ollie.carp.chalkous9.core.model;
 
-public interface Adventurer {
+public interface Abenteurer {
 
 	public enum Characteristic {
 		STAERKE,

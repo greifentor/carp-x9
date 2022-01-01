@@ -1,6 +1,6 @@
 package de.ollie.carp.chalkous9.core.service;
 
-import de.ollie.carp.chalkous9.core.model.Adventurer;
+import de.ollie.carp.chalkous9.core.model.Abenteurer;
 
 public interface BegabungService {
 
@@ -19,6 +19,6 @@ public interface BegabungService {
 		WISSEN
 	}
 
-	int calculateBonusFor(Adventurer aventurer, Begabung begabung);
+	int calculateBonusFor(Abenteurer abenteurer, Begabung begabung);
 
 }
